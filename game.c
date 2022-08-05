@@ -1,5 +1,20 @@
 #include <stdio.h>
 
+/* 
+
+locations
+
+1 = living room
+2 = bedroom
+3 = kitchen
+4 = bathroom
+
+commands
+
+1= change location
+
+*/
+
 int main(){
     char welcomeMessage[] = "Welcome to game\n";
     printf(welcomeMessage);
