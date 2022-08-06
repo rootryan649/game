@@ -20,29 +20,33 @@ int main(){
     printf(welcomeMessage);
     int location;
     int command;
-    printf("Enter command: ");
+    printf("Enter command: \n");
     scanf("%d", &command);
-    if (command == 1){
-        printf("Enter location: ");
-        scanf("%d", &location);
-        if(location == 1){
-            printf("You are in the living room");
-        }  
-        else if (location == 2){
-            printf("You are in the bedroom");
+    switch(command){
+        case 1:
+            printf("Enter location: ");
+            scanf("%d", &location);
+            switch(location){
+                case 1:
+                    printf("You are in the living room");
+                    break;
+                case 2:
+                    printf("You are in the bedroom");
+                    break;
+                case 3:
+                    printf("You are in the kitchen");
+                    break;
+                case 4:
+                    printf("You are in the bathroom");
+                    break;
+                default:
+                    printf("Invalid location");
+                    break;
+            }
+            break;
+        default:
+            printf("Invalid command");
+            break;
         }
-        else if (location == 3){
-            printf("You are in the kitchen");
-        }
-        else if (location == 4){
-            printf("You are in the bathroom");
-        } 
-        else{
-            printf("Invalid location");
-        }
-    }
-    else{
-        printf("Invalid location");
-    }
     return 0;
 }
